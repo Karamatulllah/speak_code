@@ -1,0 +1,9 @@
+<h1 align="center">Questions Listing</h1>
+<div align="center">
+  <% @question.each do |question| %>
+    <div>
+      <%= link_to question.question , question_path(question) %>
+    </div>
+
+  <% end %>
+</div>
