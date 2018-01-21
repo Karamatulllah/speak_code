@@ -1,9 +1,14 @@
 <h1 align="center">Questions Listing</h1>
-<div align="center">
+<div class="padding">
   <% @question.each do |question| %>
-    <div>
+    <div class="question_div">
       <%= link_to question.question , question_path(question) %>
     </div>
 
   <% end %>
+</div>
+<div class="padding">
+  <button type="button" name="button">
+    <%= link_to "Add new Question", new_question_path %>
+  </button>
 </div>

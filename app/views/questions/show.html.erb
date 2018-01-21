@@ -1,1 +1,11 @@
-<h1 align="center"><%= @question.question %></h1>
+<h1 class="padding">Question #</h1>
+<h2 class="question_show padding"><%= @question.question %></h2>
+<div class="padding">
+  <button type="button" name="button">
+    <%= link_to "view answers", question_answers_path(@question)%>
+  </button>
+  <button type="button" name="button">
+    <%= link_to "back", questions_path%>
+  </button>
+
+</div>

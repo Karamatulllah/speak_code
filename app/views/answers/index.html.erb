@@ -1,9 +1,21 @@
 <h1 align="center">Answers</h1>
-<div align="center">
+<h2 class="padding"> Q # " <%= @question.question %> "</h2>
+<div class="padding">
   <% @related_answer.each do |answers| %>
   <div>
     <%= answers.answer %>
   </div>
   <% end %>
 
+</div>
+<div class="padding">
+  <button type="button" name="button">
+    <%= link_to "Add New Answer", new_question_answer_path %>
+  </button>
+  <button type="button" name="button">
+    <%= link_to "Home", questions_path %>
+  </button>
+  <button type="button" name="button">
+    <%= link_to "Back", question_path(@question) %>
+  </button>
 </div>
